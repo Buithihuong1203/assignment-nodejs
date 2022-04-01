@@ -61,7 +61,7 @@ export const update = async (req, res) => {
 
     try {
         const product = await Product.findByIdAndUpdate(condition, doc, option);
-        res.json(product)
+        res.json(product);
     } catch (error) {
         res.status(400).json({
             message: "Lỗi  không tìm thấy sản phẩm"
