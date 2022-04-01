@@ -28,9 +28,9 @@ const userSchema = new Schema({
 
 userSchema.methods = {
     authenticate(password) {
-        returnthiss.password == this.encryPassword(password);
+        return this.password == this.encryPassword(password);
     },
-    encryPassword(password) {
+    encrytPassword(password) {
         if (!password) return
         try {
             return creatHmac("sha256", "abcs").update(password).digest("hex");
