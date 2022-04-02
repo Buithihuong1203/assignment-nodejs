@@ -5,6 +5,7 @@ import mongoose from "mongoose";
 
 import productRoute from "../routers/product";
 import authRoute from "../routers/auth";
+import postRoute from "../routers/post";
 
 
 const app = express();
@@ -15,6 +16,7 @@ app.use(express.json());
 
 app.use("/api", productRoute);
 app.use("/api", authRoute);
+app.use("/api", postRoute);
 
 mongoose.connect('mongodb://localhost:27017/demo-nodejs')
     .then(() => console.log("Kết nối db thành công"))
