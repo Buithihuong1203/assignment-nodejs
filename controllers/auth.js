@@ -28,6 +28,7 @@ export const signin = async (req, res) => {
     const { email, password } = req.body;
     try {
         const user = await User.findOne({ email }).exec();
+
         if (!user) {
             res.status(400).json({
                 message: " email ko tồn tại"
@@ -49,6 +50,8 @@ export const signin = async (req, res) => {
             }
         })
     } catch (error) {
-
+        res.status(400).json({
+            message: error
+        })
     }
 }

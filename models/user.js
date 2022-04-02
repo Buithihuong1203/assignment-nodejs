@@ -28,7 +28,7 @@ const userSchema = new Schema({
 
 userSchema.methods = {
     authenticate(password) {
-        return this.password == this.encryPassword(password);
+        return this.password == this.encrytPassword(password);
     },
     encrytPassword(password) {
         if (!password) return

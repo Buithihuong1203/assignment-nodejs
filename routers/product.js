@@ -7,8 +7,9 @@ const router = Router();
 
 router.get('/products', checkAuth, list);
 router.get('/products/:id', checkAuth, read);
-router.post('/products/:userId', requireSignin, isAdmin, isAuth, create);
+//router.post('/products/:userId', requireSignin, isAdmin, isAuth, create);
+router.post('/products', checkAuth, create);
 router.delete('/products/:id', checkAuth, remove);
-router.patch('/products/:id', checkAuth, update);
+router.put('/products/:id', checkAuth, update);
 
 export default router;
