@@ -6,11 +6,15 @@ const ProductSchema = new Schema({
         required: true,
         minlength: 5
     },
-    //desc: {
-    //    type: String,
-    //    required: true
+    desc: {
+        type: String,
+        required: true
 
-    //},
+    },
+    quantity: {
+        type: Number,
+        required: true
+    },
     price: {
         type: Number,
         required: true,
