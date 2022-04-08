@@ -42,7 +42,7 @@ userSchema.methods = {
 }
 
 userSchema.pre("save", function (next) {
-    this.password = this.encryPassword(this.password);
+    this.password = this.encrytPassword(this.password);
     next();
 })
 
